@@ -20,7 +20,7 @@ function landscaping_calculator_function()
       </div>
       <form id="calc-form">
           <div class="form-group">
-              <select onchange="clearFields()" name="product" class="custom-select" id="product">
+              <select onchange="calculateMaterial()" name="product" class="custom-select" id="product">
                   <option value="" selected="">Select Material</option>
                   <option value="mulch">Mulch</option>
                   <option value="topsoil">Topsoil</option>
@@ -39,19 +39,19 @@ function landscaping_calculator_function()
           <div class="form-row">
               <div class="col-md-4 mb-3">
                   <label>Length (ft):
-                      <input id="length" name="length" class="idle form-control" type="text">
+                      <input id="length" name="length" class="idle form-control" type="text" onkeyup="calculateMaterial()">
                   </label>
               </div>
 
               <div class="col-md-4 mb-3">
                   <label>Width (ft):
-                      <input id="width" name="width" class="idle form-control" type="text">
+                      <input id="width" name="width" class="idle form-control" type="text" onkeyup="calculateMaterial()">
                   </label>
               </div>
 
               <div class="col-md-4 mb-3">
                   <label>Depth (in):
-                      <input id="depth" name="depth" class="idle form-control" type="text">
+                      <input id="depth" name="depth" class="idle form-control" type="text" onkeyup="calculateMaterial()">
                   </label>
               </div>
           </div>

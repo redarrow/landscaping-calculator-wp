@@ -34,9 +34,11 @@ return conversion_factor;
 
 }
 
- $(function () {
-$("input[name='depth'], input[name='width'],input[name='product'], input[name='length']").on("change keyup", function(event){
-	  //get he product from the form
+ //$(function () {
+//$("input[name='depth'], input[name='width'],input[name='product'], input[name='length']").on("change keyup", function(event){
+
+function calculateMaterial(){
+    //get he product from the form
     var product = $("#product").val();
 
     if(product != ""){
@@ -67,5 +69,4 @@ $("input[name='depth'], input[name='width'],input[name='product'], input[name='l
         //$("#qty").html(qty_type);
 				$("#qty").html("cubic yards");
      }
-    });
-  });
+}
